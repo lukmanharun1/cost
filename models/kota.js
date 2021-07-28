@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = (sequelize, DataTypes) => {
   const kota = sequelize.define(
     "kota",

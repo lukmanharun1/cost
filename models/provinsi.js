@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = (sequelize, DataTypes) => {
   const provinsi = sequelize.define(
     "provinsi",
@@ -13,7 +12,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   )
   provinsi.associate = function (models) {
-
   }
   return provinsi;
 }

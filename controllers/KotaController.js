@@ -1,4 +1,3 @@
-const express = require('express');
 const models = require('../models');
 
 const getAllKota = async (req, res) => {

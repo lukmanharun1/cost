@@ -12,5 +12,6 @@ router.get('/provinsi/:id', ProvinsiController.getProvinsiById);
 // kota
 router.get('/kota', KotaController.getAllKota);
 router.get('/kota/:id', KotaController.getKotaById);
-// router.post('/cost');
+// cost
+router.post('/cost', CostController.createCost);
 module.exports = router;
