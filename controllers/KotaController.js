@@ -1,13 +1,13 @@
 const express = require('express');
 const models = require('../models');
 
-const getAllProvinsi = async (req, res) => {
-    // ambil seluruh data di tabel provinsi
+const getAllKota = async (req, res) => {
+    // ambil seluruh data di tabel kota
     try {
-        const getAllProvinsi = await models.provinsi.findAll({});
+        const getAllKota = await models.kota.findAll({});
         res.status(200).send({
             'status': 'success',
-            'data': getAllProvinsi
+            'data': getAllKota
         });
     } catch (error) {
         res.status(503).send({
@@ -17,18 +17,18 @@ const getAllProvinsi = async (req, res) => {
     }
 }
 
-const getProvinsiById = async (req, res) => {
-    // ambil data provinsi berdasarkan id
+const getKotaById = async (req, res) => {
+    // ambil data kota berdasarkan id
     try {
         const id = req.params.id;
-        const getProvinsi = await models.provinsi.findAll({
+        const getKota = await models.kota.findAll({
             where: {
                 id
             }
         });
         res.status(200).send({
             'status': 'success',
-            'data': getProvinsi
+            'data': getKota
         });
     } catch (error) {
         res.status(503).send({
@@ -39,6 +39,6 @@ const getProvinsiById = async (req, res) => {
 }
 
 module.exports = {
-    getAllProvinsi,
-    getProvinsiById
+    getAllKota,
+    getKotaById
 }
